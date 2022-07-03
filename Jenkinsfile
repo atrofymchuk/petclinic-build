@@ -64,7 +64,7 @@ pipeline {
                     }
                 }
                script {
-                  sh 'echo ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}'
+                  echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}"
                }
             }
         }
