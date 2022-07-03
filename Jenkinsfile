@@ -64,7 +64,7 @@ pipeline {
                     }
                 }
                script {
-                  step([$class: 'NexusArtifactUploader'])
+                  echo pom.artifactId
                }
             }
         }
