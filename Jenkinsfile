@@ -63,7 +63,9 @@ pipeline {
                         error "*** File: ${artifactPath}, could not be found";
                     }
                 }
-               sh 'echo ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}'
+               script {
+                  sh 'echo ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}'
+               }
             }
         }
     }
