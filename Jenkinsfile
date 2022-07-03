@@ -64,7 +64,7 @@ pipeline {
                     }
                 }
                script {
-                  echo NEXUS_PROTOCOL  NEXUS_URL pom.artifactId
+                  echo pom.artifactId artifactPath
                }
             }
         }
