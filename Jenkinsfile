@@ -64,7 +64,7 @@ pipeline {
                     }
                 }
                script {
-                  echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}"
+                  step([$class: 'NexusArtifactUploader' 'version'])
                }
             }
         }
