@@ -64,7 +64,8 @@ pipeline {
                     }
                 }
                script {
-                  echo pom.artifactId pom.packaging
+                  echo pom.artifactId;
+                  echo pom.packaging
                }
             }
         }
