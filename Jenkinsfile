@@ -65,7 +65,8 @@ pipeline {
                 }
                script {
                   echo pom.artifactId;
-                  echo pom.version
+                  echo pom.version;
+                  echo pom.groupId
                }
             }
         }
