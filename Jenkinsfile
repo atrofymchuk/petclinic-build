@@ -64,18 +64,7 @@ pipeline {
                     }
                 }
                script {
-                   env.build_pom_version = pom.version
-                   env.build_pom_artifactid = pom.artifactId
-                   env.build_pom_groupid = pom.groupId
-                   env.build_pom_packaging = pom.packaging
-                   buildResults = build job : "petclinic-deploy", 
-                   parameters : [
-                        string( name: env.build_pom_version, value: pom.version )
-                   ], 
-                   wait: true
-
-                   // Print the env variable set in the child job
-                   println(buildResults.getBuildVariables()["BUILD_VARIABLE "])  
+                   build job: 'petclinic-deploy', parameters: [string(name: 'VERSION', value: pom.version)]  
                }
             }
         }
