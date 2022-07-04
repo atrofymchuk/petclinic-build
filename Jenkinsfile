@@ -65,7 +65,7 @@ pipeline {
                 }
                script {
                   echo pom.artifactId;
-                  echo pom.packaging
+                  echo pom.version
                }
             }
         }
