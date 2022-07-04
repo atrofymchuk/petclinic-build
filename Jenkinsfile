@@ -64,9 +64,10 @@ pipeline {
                     }
                 }
                script {
-                  echo pom.artifactId;
-                  echo pom.version;
-                  echo pom.groupId
+                  env.build_pom_version = pom.version
+                  env.biuld_pom_artifactid = pom.artifactId
+                  env.build_pom_groupid = pom.groupId
+                  env.build_pom_packaging = pom.packaging
                }
             }
         }
